@@ -1,0 +1,40 @@
+.subscribe__form {
+    padding-top: 12px;
+    margin-left: 93px;
+}
+
+.subscribe__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe__input-container {
+    display: inline-block;
+    margin-right: 12px;
+    & input {
+            width: 358px;
+            height: 50px;
+            margin: 0px;
+            padding-left: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            background-color: transparent;
+    
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+    }
+    & input::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+
+
+

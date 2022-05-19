@@ -1,0 +1,33 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--primary-text-color);
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    transition: color var(--timing-function), fill var(--timing-function);
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--acent-text-color);
+        fill: var(--acent-text-color);
+    }
+}
+
+.list {
+    list-style: none;
+}
+
+.container--centered {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+

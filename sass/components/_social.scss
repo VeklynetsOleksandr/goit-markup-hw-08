@@ -1,0 +1,24 @@
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    &__link {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            padding: 12px;
+            fill: #afb1b8;
+    
+            transition: background-color var(--timing-function),
+                fill var(--timing-function);
+    }
+    &__link:hover,
+    &__link:focus {
+        background-color: var(--acent-text-color);
+        fill: #ffffff;
+    }
+    &__link:not(:last-child) {
+        margin-right: 10px;
+    }
+}
