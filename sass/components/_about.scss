@@ -1,5 +1,6 @@
 .about {
     padding-bottom: 94px;
+    
     &__title {
             font-weight: 700;
             font-size: 36px;
@@ -10,15 +11,21 @@
     }
     &__list {
         display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -30px;
+        margin-left: -30px;
     }
-    &__item:not(:last-child) {
-        margin-right: 30px;
-    }
+    
     &__item {
         position: relative;
+        width: calc(100% / 3 - 30px);
+        margin-bottom: 30px;
+        margin-left: 30px;
     }
+    
     &__image {
         display: block;
+        width: 100%;
     }
     &__text-container {
         position: absolute;
@@ -40,4 +47,9 @@
         text-transform: uppercase;
         color: #ffffff;
     }
+
+        @media screen and (max-width: 1199px) {
+            display: none;
+
+        }
 }
