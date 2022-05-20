@@ -5,13 +5,51 @@
     .container {
             display: flex;
             align-items: center;
+            @media screen and (max-width: 767px) {
+            justify-content: space-between;
+            }
         }
     &__logo {
-    margin-right: 93px;
+    margin-right: 88px;
     }
 }
 
+.mobile-menu-btn {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: fill var(--timing-function);
 
-// .page-header__logo {
-//     margin-right: 93px;
-// }
+    &:hover {
+        fill: var(--acent-text-color);
+    }
+
+    &__icon-cross {
+        display: none;
+    }
+    &.is-open &__icon-cross {
+        display: block;
+    }
+    &.is-open &__icon-menu {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-container {
+    @media screen and (max-width: 767px) {
+    display: none;
+    }
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-grow: 1;
+        }
+
+
+}

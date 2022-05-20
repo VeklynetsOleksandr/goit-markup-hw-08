@@ -88,8 +88,51 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .page-header .container {
+    justify-content: space-between;
+  }
+}
 .page-header__logo {
-  margin-right: 93px;
+  margin-right: 88px;
+}
+
+.mobile-menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: fill var(--timing-function);
+}
+.mobile-menu-btn:hover {
+  fill: var(--acent-text-color);
+}
+.mobile-menu-btn__icon-cross {
+  display: none;
+}
+.mobile-menu-btn.is-open .mobile-menu-btn__icon-cross {
+  display: block;
+}
+.mobile-menu-btn.is-open .mobile-menu-btn__icon-menu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    flex-grow: 1;
+  }
 }
 
 .logo {
@@ -107,6 +150,10 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--acent-text-color);
+}
+
+.nav {
+  display: flex;
 }
 
 .navigation {
@@ -161,24 +208,44 @@ body {
 .header-list {
   display: flex;
   margin-left: auto;
-  align-items: center;
 }
-
-.header-list__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (max-width: 1199px) {
+  .header-list {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .header-list {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .header-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 .header-list__link {
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   fill: var(--secondary-text-color);
 }
-
+@media screen and (min-width: 1200px) {
+  .header-list__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
 .header-list__icon {
   margin-right: 10px;
 }
