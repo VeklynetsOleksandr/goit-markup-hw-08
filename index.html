@@ -28,7 +28,12 @@
         <a class="logo page-header__logo" href="./index.html"
           ><span class="logo__text">Web</span>Studio</a
         >
-        <button type="button" class="mobile-menu-btn is-open">
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg
             width="40"
             height="40"
@@ -38,14 +43,10 @@
               class="mobile-menu-btn__icon-menu"
               href="./images/icons.svg#icon-menu_40px"
             ></use>
-            <use
-              class="mobile-menu-btn__icon-cross"
-              href="./images/icons.svg#icon-close_40px"
-            ></use>
           </svg>
         </button>
 
-        <div class="menu-container">
+        <div class="header-container">
           <nav class="nav">
             <ul class="navigation list">
               <li class="navigation__item">
@@ -397,6 +398,72 @@
       </section>
     </main>
 
+    <!-- MOBILE-MENU -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use
+            class="mobile-menu-btn__icon-cross"
+            href="./images/icons.svg#icon-close_40px"
+          ></use>
+        </svg>
+      </button>
+
+      <div class="mobile-menu">
+        <ul class="menu-list-top list">
+          <li class="menu-list-top__item">
+            <a
+              class="menu-list-top__link menu-list-top__link--active link"
+              href=""
+              >Студия</a
+            >
+          </li>
+          <li class="menu-list-top__item">
+            <a class="menu-list-top__link link" href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+          <li class="menu-list-top__item">
+            <a class="menu-list-top__link link" href="">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="menu-list-bottom list">
+          <li class="menu-list-bottom__item">
+            <a
+              class="menu-list-bottom__link--acent link"
+              href="tel:+380961111111"
+            >
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-list-bottom__item">
+            <a
+              class="menu-list-bottom__link link"
+              href="mailto:https://www.webstudio.com"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="menu-social list">
+          <li class="menu-social__item">
+            <a class="menu-social__link link" href="">Instagram</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link link" href="">Twitter</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link link" href="">Facebook</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- FOOTER -->
     <!-- <footer class="footer">
       <div class="container footer__container">
@@ -469,7 +536,7 @@
       </div>
     </footer> -->
 
-    <!-- МОДАЛЬНЕ ОКНО -->
+    <!-- MODAL-WINDOW -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
@@ -552,5 +619,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
