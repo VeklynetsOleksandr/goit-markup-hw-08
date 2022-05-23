@@ -1,27 +1,28 @@
 .page-header {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #ececec;
-    .container {
-            display: flex;
-            align-items: center;
-            @media screen and (max-width: 767px) {
-            justify-content: space-between;
-            }
-        }
-    &__logo {
-    margin-right: 88px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+  .container {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
     }
+  }
+  &__logo {
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+  }
 }
 
 .header-container {
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-grow: 1;
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-grow: 1;
+  }
 }
-

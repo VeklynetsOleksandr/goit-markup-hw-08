@@ -1,12 +1,13 @@
 .subscribe__form {
-  //   padding-top: 12px;
-  // margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
 }
 
 .subscribe__container {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .subscribe__input-container {
@@ -16,6 +17,11 @@
 
   @media screen and (min-width: 768px) {
     width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
   }
 
   & input {

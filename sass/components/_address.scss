@@ -1,5 +1,8 @@
 .address-container {
   margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .address__text {
