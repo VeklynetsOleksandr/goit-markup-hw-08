@@ -85,6 +85,8 @@ body {
 @media screen and (max-width: 767px) {
   .page-header .container {
     justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -631,8 +633,10 @@ body {
   }
 }
 
-.address-container {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .address-container {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .address-container {
@@ -952,6 +956,11 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity var(--timing-function);
 }
+@media screen and (max-width: 479px) {
+  .backdrop {
+    padding: 93px 15px 94px 15px;
+  }
+}
 
 .backdrop.is-hidden {
   opacity: 0;
@@ -963,15 +972,22 @@ body {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 450px;
-  height: 609px;
-  padding: 40px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
   background-color: #ffffff;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--timing-function);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--timing-function);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -981,9 +997,7 @@ body {
 }
 
 .modal-close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  margin-left: auto;
   display: flex;
   width: 30px;
   height: 30px;
@@ -992,6 +1006,13 @@ body {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+}
+@media screen and (min-width: 480px) {
+  .modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
 }
 .modal-close-btn:hover, .modal-close-btn:focus {
   fill: var(--acent-text-color);
@@ -1007,9 +1028,22 @@ body {
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (max-width: 479px) {
+  .modal-tittle {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal-tittle {
     line-height: 1.15;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -1061,7 +1095,7 @@ body {
 }
 
 .modal-text {
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   font-weight: 400;
@@ -1143,6 +1177,11 @@ body {
 .modal-form-btn {
   margin: 30px auto 40px auto;
 }
+@media screen and (max-width: 320px) {
+  .modal-form-btn {
+    margin: 10px auto 40px auto;
+  }
+}
 
 .menu-container {
   position: fixed;
@@ -1169,6 +1208,13 @@ body {
   color: #fff;
 }
 
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .menu-toggle {
   display: inline-flex;
   margin: 0;
@@ -1186,12 +1232,10 @@ body {
   }
 }
 
-.menu-list-top {
-  margin-bottom: 302px;
-}
 .menu-list-top__item:not(:last-child) {
   margin-bottom: 32px;
 }
+
 .menu-list-top__link {
   display: block;
   font-style: normal;
@@ -1207,7 +1251,7 @@ body {
 }
 
 .menu-list-bottom {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 .menu-list-bottom__item {
   margin-bottom: 32px;
@@ -1219,6 +1263,12 @@ body {
   letter-spacing: 0.02em;
   color: var(--acent-text-color);
 }
+@media screen and (max-width: 377px) {
+  .menu-list-bottom__link--acent {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
 .menu-list-bottom__link {
   font-weight: 500;
   font-size: 24px;
@@ -1228,11 +1278,14 @@ body {
 }
 
 .menu-social {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.menu-social__item {
+.menu-social__item:not(:last-child) {
   margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .menu-social__link {
@@ -1243,12 +1296,4 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--acent-text-color);
-}
-
-.menu-social__icon {
-  display: block;
-  margin-left: 10px;
-  width: 1px;
-  height: 22px;
-  background-color: rgba(33, 33, 33, 0.2);
 }/*# sourceMappingURL=main.css.map */
