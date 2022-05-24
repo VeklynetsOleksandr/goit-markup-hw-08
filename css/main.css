@@ -633,7 +633,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .address-container {
     margin-bottom: 60px;
   }
@@ -673,7 +673,11 @@ body {
 }
 .join__container {
   justify-content: center;
-  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .join__container {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .join__container {
